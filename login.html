@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Halaman Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+	<div class="pertama">	
+		<div class="subpertama" id="a">
+			<form class="" method="POST">
+				<h1>Login</h1>
+				<div class="input">
+					<input type="text" name="username" placeholder="Username" required>
+					<i class='bx bxs-user'></i>
+				</div>
+				<div class="input">
+					<input type="password" name="password" placeholder="Password" required>
+					<i class='bx bxs-lock-alt'></i>
+				</div>
+				<div class="lupa">
+					<label><input type="checkbox"> Lupa password?</label>
+					<a href="#">Atur ulang</a>
+				</div>
+				<div>
+					<input type="submit" name="submit" value="Login" class="tombol">
+				</div>
+				<div class="tidak-punya-akun">
+					<p>Tidak punya akun?
+						<button id="login" type="button">Buat akun</button>
+					</p>
+				</div>
+				<div class="harap-login">
+				</div>
+				<div class="kembali">
+	<a href="index.html" class="tombol-kembali">← Kembali ke Beranda</a>
+</div>
+
+			</form>
+		</div>
+
+		<div class="subkedua" id="b" style="display: none;">	 
+			<form method="POST">
+				<h1>Daftar</h1>
+				<div class="input">
+					<input type="text" name="name" placeholder="Name" required>
+					<i class='bx bx-rename'></i>
+				</div>
+				<div class="input">
+					<input type="text" name="username" placeholder="Username" required>
+					<i class='bx bxs-user'></i>
+				</div>
+				<div class="input">
+					<input type="password" name="password" placeholder="Password" required>
+					<i class='bx bxs-lock-alt'></i>
+				</div>
+				<div class="lupa">
+					<label><input type="checkbox"> Lu lupa?</label>
+					<a href="#">Jangan lupa</a>
+				</div>
+				<div>
+					<input type="submit" name="submit" value="Login" class="tombol">
+				</div>
+				<div class="tidak-punya-akun">
+					<p>Sudah punya akun?
+						<button id="daftar" type="button">Login</button>
+					</p>
+				</div>
+				<div class="harap-login">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		// Toggle antara login dan daftar
+		document.getElementById("login").addEventListener("click", function () {
+			document.getElementById("a").style.display = "none";
+			document.getElementById("b").style.display = "block";
+		});
+
+		document.getElementById("daftar").addEventListener("click", function () {
+			document.getElementById("a").style.display = "block";
+			document.getElementById("b").style.display = "none";
+		});
+	</script>
+</body>
+</html>
